@@ -15,13 +15,13 @@ export function AlertBanner() {
     //       Join Seed Sale - Make 10x at listing
     //     </p>
     //     <span className="text-black text-xs md:text-sm font-medium leading-y-10">
-    //       Refer and Earn <br /> Get 30% referral rewards (15% USDT + 15% UCC)
+    //       Refer and Earn <br /> Get 30% referral rewards (15% USDT + 15% XEE)
     //     </span>
     //     <div className="flex items-center space-x-4">
     //       <button
     //         className="bg-white text-black w-full text-xs px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
     //       >
-    //         BUY $UCC 
+    //         BUY $XEE 
     //       </button>
     //       <button
     //         onClick={() => setIsVisible(false)}
@@ -39,7 +39,7 @@ export function AlertBanner() {
           Join Presale - Earn 10X at Listing
         </p>
         <span className="text-black text-sm md:text-lg font-medium">
-          Refer and Earn <br /> Get 30% Referral Rewards (15% USDT + 15% UCC)
+          Refer and Earn <br /> Get 30% Referral Rewards (15% USDT + 15% XEE)
         </span>
         <p className="text-black text-xs md:text-sm font-medium pt-2">
           Don't miss this Opportunity

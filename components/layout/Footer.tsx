@@ -9,9 +9,9 @@ import XIcon from "@/public/images/x.svg";
 const FOOTER_LINKS = {
 
   "Socials": [
-    { label: "X", href: "https://x.com/ucchainofficial", icon: XIcon },
-    { label: "Telegram Channel", href: "https://t.me/ucchainofficial", icon: TelegramIcon },
-    { label: "Telegram Chat", href: "https://t.me/ucchaincommunity", icon: TelegramIcon },
+    { label: "X", href: "https://x.com/", icon: XIcon },
+    { label: "Telegram Channel", href: "https://t.me/", icon: TelegramIcon },
+    { label: "Telegram Chat", href: "https://t.me/", icon: TelegramIcon },
    
     
   ]

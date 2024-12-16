@@ -48,7 +48,7 @@ const {isConnected} = useAccount();
           <div className="hidden md:flex items-center space-x-4">
             <div className="social flex gap-2 items-center">
             <Link
-                href='https://x.com/ucchainofficial'
+                href='https://x.com/'
                 className="text-muted-foreground hover:text-foreground transition-colors font-light"
               >
                 <Image
@@ -61,7 +61,7 @@ const {isConnected} = useAccount();
                 
               </Link>
               <Link
-                href='https://t.me/ucchaincommunity'
+                href='https://t.me/'
                 className="text-muted-foreground hover:text-foreground transition-colors font-light"
               >
                 <Image
@@ -138,7 +138,7 @@ const {isConnected} = useAccount();
                    
                     <div className="social flex gap-4 items-center">
                       <Link
-                        href='https://x.com/ucchainofficial'
+                        href='https://x.com/'
                         className="text-muted-foreground flex items-center hover:text-foreground transition-colors font-light"
                       >
                         
@@ -151,7 +151,7 @@ const {isConnected} = useAccount();
                         /> 
                       </Link>
                       <Link
-                        href='https://x.com/ucchainofficial'
+                        href='https://x.com/'
                         className="text-muted-foreground flex gap-1 items-center hover:text-foreground transition-colors font-light"
                       >
                         <Image
@@ -165,7 +165,7 @@ const {isConnected} = useAccount();
 
                       </Link>
                       <Link
-                        href='https://t.me/ucchaincommunity'
+                        href='https://t.me/'
                         className="text-muted-foreground gap-1 flex items-center hover:text-foreground transition-colors font-light"
                       >
                         <Image
