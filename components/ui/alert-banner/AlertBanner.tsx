@@ -19,7 +19,7 @@ export function AlertBanner() {
 
   return (
     <div className="fixed w-full max-w-2xl mx-auto bottom-8 left-1/2 transform -translate-x-1/2 z-50 px-4">
-      <div className="relative bg-[#FFD700]  shadow-2xl p-8 overflow-hidden">
+      <div className="relative bg-primary  shadow-2xl p-8 overflow-hidden">
         {/* Close Button */}
         <button
           onClick={() => setIsVisible(false)}
@@ -32,10 +32,10 @@ export function AlertBanner() {
         <div className="space-y-4 w-full">
           <div className="mx-auto w-fit flex items-center justify-center ">
           <Image
-            src="/images/ucchain-logo.png"
-            alt="ucc-logo"
-            width={150}
-            height={10}
+            src="/images/xeenux.png"
+            alt="xee-logo"
+            width={100}
+            height={100}
             priority
             className=" border px-1 border-black rounded-xl"
           />
@@ -45,7 +45,7 @@ export function AlertBanner() {
             title="Join Presale - Earn 10X at Listing"
             subtitle="Refer and Earn"
             details="Get 30% Referral Rewards"
-            details2="( 15% USDT + 15% UCC )"
+            details2="( 15% USDT + 15% XEE )"
           />
 
           <div className="text-center space-y-6">
