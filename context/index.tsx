@@ -3,7 +3,7 @@
 import { wagmiAdapter, projectId } from '@/lib/config'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createAppKit } from '@reown/appkit/react'
-import { mainnet, bsc } from '@reown/appkit/networks'
+import { mainnet, bsc, bscTestnet } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 
@@ -18,7 +18,7 @@ if (!projectId) {
 const metadata = {
     name: 'xeenux',
     description: 'xeenux network',
-    url: 'https://xeenux.org', // origin must match your domain & subdomain
+    url: 'https://xeenux.org', 
     icons: ['https://avatars.githubusercontent.com/u/179229932']
 }
 
@@ -26,8 +26,8 @@ const metadata = {
 const modal = createAppKit({
     adapters: [wagmiAdapter],
     projectId,
-    networks: [mainnet, bsc],
-    defaultNetwork: bsc,
+    networks: [mainnet, bsc, bscTestnet],
+    defaultNetwork: bscTestnet,
     metadata: metadata,
     features: {
         analytics: true,
