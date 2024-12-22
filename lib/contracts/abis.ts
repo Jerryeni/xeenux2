@@ -1,5 +1,160 @@
-export const PRESALE_ABI =
+export const PRESALE_ABI = 
 [
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_ref",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "buy",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_token",
+				"type": "address"
+			}
+		],
+		"name": "changeXeenuxAddress",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "token",
+				"type": "address"
+			}
+		],
+		"name": "claimStuckTokens",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "distributeDividend",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "endDailyROI",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_amt",
+				"type": "uint256"
+			}
+		],
+		"name": "setPrice",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "minDep",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rDailyROI",
+				"type": "uint256"
+			}
+		],
+		"name": "setRatios",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_level",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_fee",
+				"type": "uint256"
+			}
+		],
+		"name": "setRefIncomeLevelRatios",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_level",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_fee",
+				"type": "uint256"
+			}
+		],
+		"name": "setRefTokenLevelRatios",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_isVirtualDistrib",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isRefVirtualDistrib",
+				"type": "bool"
+			}
+		],
+		"name": "setVirtualDistribToggle",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "startDailyROI",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
 	{
 		"inputs": [
 			{
@@ -11,48 +166,15 @@ export const PRESALE_ABI =
 				"internalType": "address",
 				"name": "_usdt",
 				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_xeenux",
+				"type": "address"
 			}
 		],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "amt",
-				"type": "uint256"
-			}
-		],
-		"name": "BNBtoUCC",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "amt",
-				"type": "uint256"
-			}
-		],
-		"name": "USDTtoUCC",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
 	},
 	{
 		"inputs": [
@@ -67,11 +189,6 @@ export const PRESALE_ABI =
 			{
 				"internalType": "uint256",
 				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "refId",
 				"type": "uint256"
 			},
 			{
@@ -101,37 +218,59 @@ export const PRESALE_ABI =
 	{
 		"inputs": [
 			{
-				"internalType": "address",
-				"name": "_user",
-				"type": "address"
-			},
-			{
 				"internalType": "uint256",
-				"name": "_ref",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_amount",
+				"name": "amt",
 				"type": "uint256"
 			}
 		],
-		"name": "buy",
-		"outputs": [],
-		"stateMutability": "payable",
+		"name": "BNBtoXEENUX",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
-		"inputs": [
+		"inputs": [],
+		"name": "currentTotalInvestmentsBNBTBD",
+		"outputs": [
 			{
-				"internalType": "address",
-				"name": "token",
-				"type": "address"
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
-		"name": "claimStuckTokens",
-		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "currentTotalInvestmentsUSDTTBD",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "currentTotalTokensTBD",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -175,26 +314,6 @@ export const PRESALE_ABI =
 	},
 	{
 		"inputs": [],
-		"name": "distributeDividend",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_token",
-				"type": "address"
-			}
-		],
-		"name": "distributeToUsers",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
 		"name": "dividendLastDist",
 		"outputs": [
 			{
@@ -204,13 +323,6 @@ export const PRESALE_ABI =
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "endDailyROI",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -278,14 +390,34 @@ export const PRESALE_ABI =
 						"internalType": "uint256",
 						"name": "refCount",
 						"type": "uint256"
-					},
-					{
-						"internalType": "uint256[]",
-						"name": "referrals",
-						"type": "uint256[]"
 					}
 				],
-				"internalType": "struct uccPSale.User[]",
+				"internalType": "struct xeenuxPsale.User[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllUsersVirtualToken",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct xeenuxPsale.UserVT[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -330,11 +462,6 @@ export const PRESALE_ABI =
 					},
 					{
 						"internalType": "uint256",
-						"name": "refId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
 						"name": "bnbAmt",
 						"type": "uint256"
 					},
@@ -354,7 +481,7 @@ export const PRESALE_ABI =
 						"type": "uint256"
 					}
 				],
-				"internalType": "struct uccPSale.Activity[]",
+				"internalType": "struct xeenuxPsale.Activity[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -452,16 +579,35 @@ export const PRESALE_ABI =
 						"internalType": "uint256",
 						"name": "refCount",
 						"type": "uint256"
-					},
-					{
-						"internalType": "uint256[]",
-						"name": "referrals",
-						"type": "uint256[]"
 					}
 				],
-				"internalType": "struct uccPSale.User",
+				"internalType": "struct xeenuxPsale.User",
 				"name": "",
 				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "user",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_level",
+				"type": "uint256"
+			}
+		],
+		"name": "getUserLevelRefs",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
 			}
 		],
 		"stateMutability": "view",
@@ -495,6 +641,83 @@ export const PRESALE_ABI =
 			}
 		],
 		"name": "id",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "isRefVirtual",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "isVirtual",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "lastDist",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "levelIncomeRatios",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "levelTokenRatios",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -571,8 +794,24 @@ export const PRESALE_ABI =
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "refIncomeRatio",
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "teams",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -581,67 +820,6 @@ export const PRESALE_ABI =
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "refTokenRatio",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_amt",
-				"type": "uint256"
-			}
-		],
-		"name": "setPrice",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "minDep",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "rTokenRatio",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "rDailyROI",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "rIncRatio",
-				"type": "uint256"
-			}
-		],
-		"name": "setRatios",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "startDailyROI",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -704,6 +882,25 @@ export const PRESALE_ABI =
 				"internalType": "contract IERC20",
 				"name": "",
 				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amt",
+				"type": "uint256"
+			}
+		],
+		"name": "USDTtoXEENUX",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -802,6 +999,38 @@ export const PRESALE_ABI =
 				"internalType": "uint256",
 				"name": "refCount",
 				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "usersVirtualToken",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "xeenuxToken",
+		"outputs": [
+			{
+				"internalType": "contract IERC20",
+				"name": "",
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
