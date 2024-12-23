@@ -72,8 +72,16 @@ export function usePresale() {
 
       setStatus(PurchaseStatus.APPROVING);
       const parsedAmount = ethers.parseUnits(amount, 18);
+      // const urlParams = new URLSearchParams(window.location.search);
+      // const ref = parseInt(urlParams.get('ref') || '0') || 0;
       const urlParams = new URLSearchParams(window.location.search);
-      const ref = parseInt(urlParams.get('ref') || '0') || 0;
+      const refParam = urlParams.get('ref');
+      const ref = parseInt(refParam || '0', 10);
+      if (isNaN(ref)) {
+        console.error("Invalid referral ID:", refParam);
+        toast.error("Invalid referral ID", { duration: 3000, position: "top-right" });
+        return;
+      }
       const approveTx = await ua.approve(
         ADDRESSES.PRESALE,
         parsedAmount
@@ -178,7 +186,7 @@ export function usePresale() {
       const priceUSDT = await ps.price();
       const priceBNB = await ps.priceBNB();
       const totalTokensToBEDistributed = await ps.totalTokensToBEDistributed();
-  
+
 
       setTotalToken(b2i(totalTokensToBEDistributed));
 
