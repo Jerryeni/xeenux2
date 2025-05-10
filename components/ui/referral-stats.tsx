@@ -88,14 +88,30 @@ export function ReferralStats({
 
         {/* Success Message */}
         <div
-          className={`absolute right-2 top-0 transform ${
-            copiedMessage
-              ? "translate-y-[-120%] opacity-100"
-              : "translate-y-[-150%] opacity-0"
-          } bg-primary text-black text-xs font-bold px-2 py-1 rounded-md shadow-md transition-all duration-300`}
+          className={`absolute right-2 top-0 transform ${copiedMessage
+            ? "translate-y-[-120%] opacity-100"
+            : "translate-y-[-150%] opacity-0"
+            } bg-primary text-black text-xs font-bold px-2 py-1 rounded-md shadow-md transition-all duration-300`}
         >
           Copied!
         </div>
+
+
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex-1 bg-black/50 rounded-xl p-4 border border-[#00d4ff]/20">
+            <div className="text-sm text-gray-400 mb-1">Coins allocated (XEE)</div>
+            <div className="text-2xl font-bold text-primary">{totalEarningsucc}</div>
+          </div>
+        </div>
+        <Button
+          size="sm"
+          className="bg-primary hover:bg-primary/90 text-black"
+        >
+          Claim
+        </Button>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { shortenAddress } from "@/lib/utils";
 import { usePresale } from "@/providers/provider";
 
 import { useAccount } from "wagmi";
+import { AppKitButton, AppKitConnectButton, W3mConnectButton } from "@reown/appkit";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,7 +80,8 @@ const {isConnected} = useAccount();
             >
               {userAddress === "" ? "Connect Wallet" : shortenAddress(userAddress)}
             </Button> */}
-            <w3m-button />
+            {/* <appkit-connect-button /> */}
+            <appkit-button />
           </div>
 
           {/* Mobile Buttons */}
@@ -90,7 +92,7 @@ const {isConnected} = useAccount();
             >
               {userAddress === "" ? "Connect Wallet" : shortenAddress(userAddress)}
             </Button> */}
-            <w3m-button />
+            <appkit-button />
           </div>
 
           {/* Hamburger Menu for Mobile */}
@@ -180,7 +182,7 @@ const {isConnected} = useAccount();
                       </Link>
                     </div>
                     
-                      <w3m-button />
+                      <appkit-button />
                     
                   </div>
                 </div>

@@ -27,7 +27,7 @@ export default function RootLayout({
           <ContextProvider cookies={null}>
             <Navbar />
             {children}
-            <AlertBanner />
+            {/* <AlertBanner /> */}
           </ContextProvider>
         </PresaleProvider>
 
